@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simply TD</title>
+    <link rel="stylesheet" href="hud.css">
+    <link rel="stylesheet" href="tower_click.css">
+    <script src="maps.js"></script>
+    <script src="towers.js"></script>
+    <script>var sixsixsix_c = 0;</script>
+</head>
+<body onload="addEach_tower()">
+    <div id="wrapper" class="wrapper">
+        <div id="content" class="content">
+            <div class="banner">
+                <img src="blocks/banner.png" alt="Picture of a Hard map with one cannon tower"></img>
+                
+            </div>
+            <div class="start_div">
+                <button disabled id="startbutton" class="startbutton">
+                    Start
+                </button>
+            </div>
+            
+            <div id="settings" class="settings">
+                <div class="side_bar"></div>
+                <div class="all">
+                    <h3><u>Map size</u></h3>
+                    <p>
+                        <label for="size">
+                            <select name="size" id="map_size">
+                                <option value="0x0">Select size</option>
+                                <option title="18 blocks per row, 12 rows" value="18x12">18x12 (Pc)</option>
+                                <option title="12 blocks per row, 10 rows" value="12x10" class="tablet">12x10 (Tablet)</option>
+                                <option title="8 blocks per row, 10 rows" value="08x10" class="mobile">8x10 (Mobile)</option>
+                            </select>
+                        </label>
+                    </p>
+                    <h3><u>Difficulty</u></h3>
+                    <p>
+                        <label for="diffi">
+                            <select name="diffi" id="difficulty">
+                                <option style="background-color: lightblue;" value="easy">Easy</option>
+                                <option style="background-color: orange;" value="normal">Normal</option>
+                                <option style="background-color: red;" value="hard">Hard</option>
+                                <option style="background-color: darkred; display: none;" value="hell" id="hell">Hell</option>
+                            </select>
+                        </label>
+                    </p>
+                    <h3><u> Special settings </u></h3>
+                    <p>&#127922 Random tower mode: <input id="game_mode_tower" type="checkbox"></p>
+                    <p>&#127922 Random wave mode: <input id="game_mode_wave" type="checkbox"></p>
+                </div>
+            </div>
+            <div class="tower_infos" id="tower_infos">
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Provide to you by ZO4</p>
+        </div>
+        
+
+        
+        
+
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="enemies.js"></script>
+<script src="towers_frontPage.js"></script>
+</html>

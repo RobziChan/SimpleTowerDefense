@@ -1,0 +1,151 @@
+.click_tower {
+    border-radius: 50%;
+    border-color: darkred;
+    text-align: center;
+}
+.tower_buy {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border: 3px solid black;
+    text-align: center;
+    background-color: teal;
+    font-size: 1.6em;
+    
+}
+.tower_buy:hover {
+    border-color: limegreen;
+    cursor: pointer;
+}
+
+.tower_sell {
+    width: 99.7%;
+    height: 35px;
+    border: 1px solid black;
+    text-align: center;
+    background-color: darkred;
+    
+    font-size: 1.4em;
+}
+.tower_sell:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.tower_holder {
+    display: block;
+    background-color: gray;
+    margin: auto;
+    width: 900px;
+    height: 150px;
+    text-align: center;
+    
+}
+.tower_holder .inner {
+    border: 5px solid rgb(46, 46, 46);
+    margin: auto;
+    height: 140px;
+}
+.tower_holder .tower_click {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: 3px solid black;
+    border-radius: 50%;
+    text-align: center;
+    background-color: gray;
+    font-size: 1.6em;
+    cursor: pointer;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+
+}
+.tower_holder .tower_click:hover {
+    border-color: limegreen;
+    cursor: pointer;
+}
+.tower_holder .tower_click:active {
+    border-color: limegreen;
+}
+
+
+.damage_text::before {
+    content: "+";
+    font-weight: bold;
+    color: green;
+}
+.damage_text {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    animation: up 2s forwards;
+}
+
+.enemy_die::before {
+    content: "+";
+    font-weight: bold;
+    color: green;
+}
+.enemy_die {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    animation: up 2.3s forwards;
+}
+.crit {
+    position: absolute;
+    font-size: 2em;
+    font-weight: bold;
+    animation: up 2.3s forwards;
+}
+
+@keyframes up {
+    to {top: 0; opacity: 0;}
+}
+
+.path_info {
+    position: absolute;
+    background-color: rgba(156, 156, 156, 1);
+    border: 1px solid black;
+}
+.path_info td {
+    border: none;
+}
+.path_info table {
+    border: none;
+    text-align: right;
+}
+.path_info h3 {
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+
+.tower_upgrade {
+    width: 99.7%;
+    height: 35px;
+    border: 1px solid black;
+    text-align: center;    
+    font-size: 1.4em;
+    background-color: darkgreen;
+}
+.tower_upgrade:hover {
+    background-color: green;
+    cursor: pointer;
+}
+.tower_info {
+    position: absolute;
+    background-color: #014d4e;
+    z-index: 10;
+    margin: auto;
+    width: fit-content;
+    min-width: 100px;
+}
+.tower_info table {
+    color: mediumvioletred;
+}

@@ -1,0 +1,454 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: linear-gradient(to top, rgba(0,128, 128,0.3), rgba(0,128, 128,0.8));
+}
+.wrapper {
+    max-width: 1920px;
+    height: 100%;
+    margin-left: auto;
+    margin-left: 0;
+    border: solid 1px gray;
+    overflow-y: auto;
+}
+.footer {
+    margin: auto;
+    bottom: 0;
+    width: 50%;
+    background-color: skyblue;
+    color: slategray;
+    text-align: center;
+}
+.content {
+    background-image: linear-gradient(to top, rgba(166, 230, 255, 0.4), rgba(0,128, 128,1));
+    width: 50%;
+    min-width: 190px;
+    height: fit-content;
+    margin: auto;
+}
+.banner {
+    margin: auto;
+    height: 250px;
+}
+.banner img {
+    width: 100%;
+    height: fit-content;
+    background-color: gray;
+}
+.start_div {
+    position: relative;
+    margin: auto;
+    top: -50;
+    width: 50%;
+}
+.start_div .startbutton {
+    width: 100%;
+    background-color: gray;
+    border: 3px solid rgb(59, 59, 59);
+    color: rgb(63, 63, 63);
+    transition: 1s;
+    font-size: 2em;
+}
+.start_div .startbutton:not([disabled]) {
+    color: black;
+    border-color: black;
+    background-color: rgb(0, 95, 95);
+}
+.start_div .startbutton:hover:not([disabled]) {
+    transition: 1s;
+    box-shadow: 5px 10px 10px black;
+    border: 3px solid green;
+    color: green;
+    cursor: pointer;
+}
+.start_div .startbutton:hover:is([disabled]) {
+    cursor: not-allowed;
+}
+.start_div .startbutton:active {
+    transition: 1s;
+    box-shadow: 5px 10px 10px black;
+    border: 3px solid green;
+    color: green;
+    cursor: pointer;
+}
+@media only screen and (max-width: 1000px) {
+    .banner, img {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+    .playAera .platform {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5em;
+        text-shadow: 0px 0px 8px gold;
+        background-size: 40px 40px;        
+    }
+    .start_div {
+        width: 100%;
+        top: 0;
+    }
+    .player_info, .tower_holder {
+        max-width: 600px;
+        font-weight: 100;
+    }
+    .player_info .player table {
+        font-size: 0.9em;
+    }
+    .tower_holder .inner .towers .tower_click {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2em;
+        margin-left: 10px;
+    }
+    .Start_wave_button {
+        font-size: 1.2em !important;
+    }
+    .tablet {
+        background-color: greenyellow;
+    }
+    
+}
+/*just to make it more clean for mobile or where the width is <600px*/
+@media only screen and (max-width: 600px) {
+    .player_info, .tower_holder {
+        max-width: 400px;
+        font-weight: 100;
+    }
+    .player_info .player table {
+        font-size: 0.9em;
+    }
+    .tablet {
+        background-color: transparent;
+    }
+    .mobile {
+        background-color: greenyellow;
+    }
+}
+.settings {
+    width: 100%;
+}
+.settings .all {
+    margin: auto;
+    padding: 0;
+    position: relative;
+    border: 3px solid indigo;
+    width: 80%;
+    height: fit-content;
+    text-align: center;
+}
+.settings .all select {
+    outline: none;
+    text-align: center;
+    background-color: teal;
+    border: 3px solid indigo;
+}
+.settings .all h3 {
+    text-align: center;
+}
+.tower_infos {
+    margin: auto;
+    margin-top: 1%;
+    width: 80%;
+    min-width: 180px;
+    border: 3px solid indigo;
+}
+.tower_infos h1 {
+    text-align: center;
+}
+.tower_infos div {
+    margin: auto;
+    width: 90%;
+    border-style: none none solid none;
+    border-color: indigo;
+    border-width: 3px;
+}
+.tower_infos .holder {
+    border: none;
+    text-align: center;
+}
+.tower_infos div .tower_name p {
+    font-size: 4em;
+}
+.tower_infos .tower_name {
+    display: inline-block;
+    border: none;
+    width: fit-content;
+    min-width: 100px;
+    text-align: center;
+}
+.tower_infos .tower_stats {
+    display: inline-block;
+    border: none;
+    width: fit-content;
+    vertical-align: top;
+}
+#game_platform {
+    border: 1px solid black;
+    align-self: center;
+}
+.platform {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    justify-content: center;
+    align-content: center;
+    font-size: 1.8em;
+    text-shadow: 0px 0px 8px gold;
+    background-image: url(blocks/tower.png);
+    background-size: 50px 50px;
+}
+.platform .start {
+    color: yellow;
+    height: 90%;
+    border: 3px solid yellow;
+    border-left: none;
+}
+.platform .end {
+    color: yellow;
+    height: 90%;
+    border: 3px solid green;
+    border-right: none;
+}
+.platform_end {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    display: block;
+}
+#path {
+    background-color: darkgray;
+    border-color: transparent;
+}
+.playAera {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+.player_info {
+    display: block;
+    margin: auto;
+    width: 900px;
+    background-color: teal;
+}
+.player {
+    border: 5px solid rgb(46, 46, 46);
+    height: auto;
+    overflow: hidden;
+}
+.player_info .player table {
+    text-align: center;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td {
+    min-width: 50px;
+    padding-right: 10px;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+
+.active_block {
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid blue;
+    animation: in_out 0.3s infinite;
+}
+.info{
+    text-align: right;
+}
+@keyframes in_out {
+    0% {border: 2px solid blue;}
+    25% {border-top: transparent; border-right: 2px solid blue;}
+    50% {border-right: transparent; border-bottom: 2px solid blue;}
+    75% {border-bottom: transparent; border-left: 2px solid blue;}
+    100% {border-left: transparent; border-top: 2px solid blue;}
+}
+.Start_wave_button {
+    display: block;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: auto;
+    width: 10%;
+    min-width: 200px;
+    background-color: rgb(182, 196, 58);
+    border: 4px solid black;
+    cursor: pointer;
+    transition: 0.2s;
+    box-shadow: 0px 0px 0px;
+    
+}
+.Start_wave_button:hover  {
+    background-color: green;
+    box-shadow: 0px 5px 5px black;
+    transition: 0.2s;
+}
+.range_Show {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 0px 15px blue inset;
+    animation: blink_in_out_red 2s infinite;
+}
+@keyframes blink_in_out_red {
+    10% {box-shadow: 0px 0px 15px blue inset;}
+    20% {box-shadow: 0px 0px 20px blue inset;}
+    30% {box-shadow: 0px 0px 25px blue inset;}
+    50% {box-shadow: 0px 0px 30px blue inset;}
+    
+}
+
+.game_over_holder {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(82, 82, 82);
+    font-family: fantasy;
+    min-width: 600px;
+    min-height: 500px;
+    border: 10px double darkblue;
+}
+.game_over_holder .info  {
+    position: relative;
+    display: block;
+    background-color: gray;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 5%;
+}
+.game_over_holder .info table{
+    text-align: center;
+    color: purple;
+}
+.game_over_holder h1 {
+    text-align: center;
+    animation: blink_text 0.3s infinite;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 4px 0px 10px black,
+    0px 0px 70px red;
+}
+@keyframes blink_text {
+    to {color:darkred};
+}
+.game_over_holder .scores {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.game_over_holder .scores table {
+    color: yellow;
+    font-weight: normal;
+    font-family: none;
+}
+.game_over_holder .scores .new_score table {
+    color: darkred;
+}
+
+.game_over_holder .quit {
+    display: inline-block;
+    background-color: darkred;
+    font-size: 1.4em;
+    margin-left: 15%;
+    margin-top: 5vh;
+    border: 4px solid black;
+    cursor: pointer;
+    width: 150px;
+}
+.game_over_holder .quit:hover {
+    background-color: red;
+}
+.game_over_holder .again {
+    display: inline-block;
+    background-color: darkgreen;
+    font-size: 1.4em;
+    margin-left: 15%;
+    margin-top: 5vh;
+    border: 4px solid black;
+    cursor: pointer;
+    width: 150px;
+}
+.game_over_holder .again:hover {
+    background-color: lime;
+}
+
+.game_over_holder .win {
+    text-align: center;
+    animation: blink_text_win 0.5s infinite;
+    font-size: 3em;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 4px 0px 10px black,
+    0px 0px 70px lime;
+}
+@keyframes blink_text_win {
+    to {color:green};
+}
+
+.game_over_holder .home {
+    display: inline-block;
+    background-color: darkgreen;
+    font-size: 1.4em;
+    text-align: center;
+    margin-left: 15%;
+    margin-top: 5vh;
+    border: 4px solid black;
+    cursor: pointer;
+    width: 450px;
+    color: white;
+}
+.game_over_holder .home:hover {
+    background-color: lime;
+}
+
+
+.wave_info_popup {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: gray;
+    text-align: center;
+    text-shadow: 0px 0px 5px black;
+    animation: wave_up 2s forwards;
+    transition: 2s;
+}
+.wave_info_popup table {
+    text-align: center;
+    color: hotpink;
+}
+@keyframes wave_up {
+    to {
+        top: 0px;
+    }
+}
+.alert {
+    position: absolute;
+    display: block;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    background-color: black;
+    color: silver;
+    text-align: center;
+}
+.alert:hover, .alert:active {
+    cursor: pointer;
+    background-color: gray;
+}
